@@ -1,0 +1,90 @@
+.toptitle{
+  margin: 33px;
+  font-size: 2em;
+}
+
+.topp{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+  color: black;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+table tr {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+table td{
+  font-weight: normal;
+  padding: 10px;
+}
+
+
+td a {
+  margin-right: 10px;
+}
+
+.register-success {
+  color: green;
+}
+
+.update-success{
+  color: green;
+}
+
+.destory-success{
+  color: green;
+}
+
+
+.h1{
+  font-style: bold;
+}
+
+
+p{
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+
+
+body {
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+
+
+div.text, div.action{
+    margin-bottom: 15px;
+}
+
+div, label, action{
+  display: block;
+}
+
+.errortext{
+  font-size: 13px;
+  line-height: 18px;
+}
+
+ul, li{
+  font-size: 13px;
+  line-height: 18px;
+  color: red
+}
+
+a {
+  color: gray
+}

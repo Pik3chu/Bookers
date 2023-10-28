@@ -1,0 +1,14 @@
+<% if flash[:success] %>
+  <p class="register-success"><%= flash[:success] %></p>
+<% end %>
+
+<% if @book %>
+　<p><strong>Title:</strong> <%= @book.title %></h2>
+　<p><strong>Body:</strong> <%= @book.body %></p>
+  <%= link_to 'Edit', edit_book_path(@book), style: 'color: black;'%> |
+  <%= link_to 'Back', books_path, style: 'color: gray;' %>
+<% else %>
+  <p>本が見つかりません。</p>
+  <%= link_to 'Back', books_path %>
+<% end %>
+

@@ -1,0 +1,61 @@
+<% if flash[:success] %>
+  <p class="destory-success"><%= flash[:success] %></p>
+<% end %>
+
+<h1>Books</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><span><%= book.title %></span></td>
+        <td><%= book.body %></td>
+        <td>
+          <%= link_to 'Show', book_path(book.id), style: 'color: black;' %>
+          <%= link_to 'Edit', edit_book_path(book.id), style: 'color: black;'%>
+          <%= link_to 'Destroy', book, style: 'color: black;', method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+  <h2><strong>New book</strong></h2>
+  <% if @book.errors.any? %>
+  <div id="errortext">
+    <p><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</p>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+　<% end %>
+
+  <!-- form_with部分 -->
+  <%= form_with model: @book, url: '/books', method: :post do |f| %>
+
+  <div class="text">
+    <label>Title</label>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="text">
+    <label>Body</label>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="action">
+    <%= f.submit 'Create Book' %>
+  </div>
+
+<% end %>
+
+
